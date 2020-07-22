@@ -2,6 +2,7 @@ const os = require('os');
 
 setInterval(() => {
   const { freemem, totalmem } = os;
+  const log = require('./logger');
 
   const total = parseInt(totalmem() / 1024 / 1024);
   const mem = parseInt(freemem() / 1024 / 1024);
@@ -16,4 +17,6 @@ setInterval(() => {
 
   console.clear();
   console.table(stats);
+  log(`${JSON.stringify(stats)}\n`);
+
 }, 1000);
