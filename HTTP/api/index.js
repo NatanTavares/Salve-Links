@@ -11,9 +11,7 @@ function writeFile(callBack) {
     JSON.stringify(data, null, 2),
     err => {
       if (err) throw err;
-      
       callBack(JSON.stringify({ message: "ok" }));
-      
     }
   ); 
 }

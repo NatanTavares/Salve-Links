@@ -10,7 +10,7 @@
 <body>
   <header>
     <nav>
-      <h1>Title of SPA</h1>
+      <h1>Save yours urls!</h1>
       <div class="buttons-menu">
         <button>HOME</button>
         <button>ABOUT</button>
@@ -19,21 +19,13 @@
   </header>
 
   <section>
-
     <ul class="list-url">
-      <li class="card">
-        <h3>nome: Lorem ipsum</h3>
-        <h4>url: Lorem ipsum dolor sit amet consectetur, adipisicing elit.</h4>
-      </li>
-
-      <li class="card">
-        <h3>nome: Lorem ipsum</h3>
-        <h4>url: Lorem ipsum dolor sit amet consectetur, adipisicing elit.</h4>
-      </li>
-
-      <li class="card">
-        <h3>nome: Lorem ipsum</h3>
-        <h4>url: Lorem ipsum dolor sit amet consectetur, adipisicing elit.</h4>
+      <li class="panel-card">
+        <form id="formUrl">
+          <input id="input-name" type="text" placeholder="Name" required>
+          <input id="input-url" type="text" placeholder="Url" required>
+          <button id="button-more-card" type="submit">+</button>
+        </form>
       </li>
     </ul>
   </section>
@@ -42,6 +34,6 @@
     <a href="https://linktr.ee/NatanTavares" target="_black">NTS</a>
   </footer>
 
-  <script src="script.js"></script>
+  <script defer src="script.js"></script>
 </body>
 </html>

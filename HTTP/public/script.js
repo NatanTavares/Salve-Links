@@ -1,10 +1,18 @@
 console.log('Script working');
+
 async function loadUrls() {
   const result = await fetch("http://localhost:3000/").then(data => data.json());
-  result.urls.map(({ name, url }) => addUrl({ name, url }));
+  result.urls.map(({ name, url }) => addUrlCard({ name, url }));
 }
 
-function addUrl({ name, url }) {
+async function addUrls(name, url) {
+  await fetch(`http://localhost:3000/?name=${name.value}&url=${url.value}`)
+  .then(message => console.log(String(message)));
+
+  console.log('> passou addUrl');
+}
+
+function addUrlCard({ name, url }) {
   const ul = document.querySelector('.list-url');
   const a = document.createElement('a')
   const card = document.createElement('li');
@@ -20,11 +28,19 @@ function addUrl({ name, url }) {
   a.innerHTML = url;
   a.target = '_black';
   a.href = url;
-
-  // <li class="card">
-  //   <h3>name: Contato</h3>
-  //   <h4>url: <a href="https://linktr.ee/NatanTavares" target="_black">https://linktr.ee/NatanTavares</a></h4>
-  // </li>
 }
 
 loadUrls();
+
+function handleValues() {
+  const buttonSubmit = document.querySelector('#button-more-card');
+  buttonSubmit.addEventListener('click', event => {
+
+    const nameInput = document.querySelector('#input-name');
+    const urlInput = document.querySelector('#input-url');
+    
+    if (nameInput.value && urlInput.value) addUrls(nameInput, urlInput);
+  });
+} 
+
+handleValues();
