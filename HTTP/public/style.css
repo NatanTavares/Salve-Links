@@ -56,6 +56,11 @@ section .list-url li {
   padding: .8em;
 }
 
+section .list-url li:target {
+  background-color: red;
+  color: red;
+}
+
 section .list-url li:hover {
   background-color: #ddd;
 }
@@ -68,6 +73,20 @@ section .list-url li:first-child {
 section .list-url li:last-child {
   border-bottom-left-radius: 4px;
   border-bottom-right-radius: 4px;
+}
+
+section .list-url li #formUrl #button-more-card {
+  background-color: rgba(0, 0, 0, 0);
+  border: none;
+  font-size: 16pt;
+  margin-left: .1em;
+}
+
+section .list-url li #formUrl #button-more-card p {
+  background-color: rgba(0, 0, 0, 0);
+
+  color: orangered;
+  margin-left: .2em;
 }
 
 section .list-url li a {
