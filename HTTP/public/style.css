@@ -56,12 +56,17 @@ section .list-url li {
   padding: .8em;
 }
 
-section .list-url li:target {
-  background-color: red;
-  color: red;
+section .list-url .card, .panel-card {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
 }
 
-section .list-url li:hover {
+section .list-url .card .panel-card h3 { /* Name card */
+  width: 100%;
+}
+
+section .list-url .card:hover {
   background-color: #ddd;
 }
 
@@ -75,21 +80,16 @@ section .list-url li:last-child {
   border-bottom-right-radius: 4px;
 }
 
-section .list-url li #formUrl #button-more-card {
+section .list-url li #formUrl #button-more-card, .remove-card {
   background-color: rgba(0, 0, 0, 0);
   border: none;
+  cursor: pointer;
   font-size: 16pt;
-  margin-left: .1em;
-}
-
-section .list-url li #formUrl #button-more-card p {
-  background-color: rgba(0, 0, 0, 0);
-
   color: orangered;
-  margin-left: .2em;
+  padding-left: .2em;
 }
 
-section .list-url li a {
+section .list-url .card a {
   color: orangered;
 }
 

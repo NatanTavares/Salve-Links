@@ -18,11 +18,11 @@ function addUrlCard({ name, url }) {
 
   card.classList.add('card');
   card.innerHTML = `
-    <h3>name: ${name}</h3>
-    <h4>url: <a href="${url}" target="_black">${url}</a></h4>
     <div class="panel-card">
-      <button class="remove-card">-</button>
+      <h3>name: ${name}</h3>
+      <h4>url: <a href="${url}" target="_black">${url}</a></h4>  
     </div>
+    <button class="remove-card">-</button>
   `;
 
   ul.appendChild(card);
